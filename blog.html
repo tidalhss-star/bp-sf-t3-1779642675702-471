@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 블로그 – 마포 신작 애니메이션 이야기</title>
+    <meta name="description" content="마포에서 시작하는 신작 애니메이션 프로젝트, PBN 빌더가 당신의 이야기를 세상에 알립니다. 고급스러운 에디토리얼 감성으로 브랜드 스토리를 전달해요. 지금 상담하세요.">
+    <meta name="keywords" content="PBN 빌더, 마포 애니메이션, 신작 애니, 애니메이션 제작, 브랜드 스토리텔링, 애니메이션 마케팅">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <link rel="canonical" href="https://sf-t3-1779642675702-471.vercel.app/">
+    <meta property="og:title" content="PBN 빌더 – 마포 신작 애니메이션 전문">
+    <meta property="og:description" content="마포에서 시작하는 신작 애니메이션, PBN 빌더가 당신의 이야">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; background-color: #0a0a0a; color: #e0dcd5; line-height: 1.8; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h1, h2, h3, h4 { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 300; letter-spacing: 0.05em; }
+        h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: #c9a84c; }
+        h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #d4b96a; }
+        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; color: #c9a84c; }
+        p { margin-bottom: 1.2rem; font-size: 1.1rem; }
+        a { color: #c9a84c; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+        a:hover { border-bottom-color: #c9a84c; }
+        .drop-cap::first-letter { font-size: 4rem; float: left; line-height: 0.8; margin-right: 0.5rem; color: #c9a84c; font-family: 'Georgia', serif; font-weight: bold; }
+        header { padding: 1.5rem 0; border-bottom: 1px solid rgba(201, 168, 76, 0.3); position: relative; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-family: 'Helvetica Neue', Arial, sans-serif; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.15em; color: #e0dcd5; border-bottom: none; }
+        .nav-links a:hover { color: #c9a84c; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; }
+        .hamburger span { width: 25px; height: 2px; background: #c9a84c; margin: 4px 0; }
+        .tel-link { font-family: 'Helvetica Neue', Arial, sans-serif; background: #c9a84c; color: #0a0a0a; padding: 0.5rem 1.2rem; border-radius: 2px; font-size: 0.9rem; transition: background 0.3s; border-bottom: none; }
+        .tel-link:hover { background: #b8942e; color: #0a0a0a; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0a0a0a; padding: 1rem 2rem; border-bottom: 1px solid rgba(201, 168, 76, 0.3); }
+            .nav-links.active { display: flex; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.6rem; }
+        }
+        .hero { padding: 5rem 0 3rem; text-align: center; }
+        .hero h1 { margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; color: #b0a89a; }
+        .content-section { padding: 3rem 0 5rem; }
+        .blog-card { background: rgba(255,255,255,0.03); padding: 2.5rem; margin-bottom: 2rem; border-left: 3px solid #c9a84c; }
+        .blog-card .meta { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; color: #8a7f6e; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+        .blog-card h2 { margin-bottom: 0.5rem; }
+        footer { border-top: 1px solid rgba(201, 168, 76, 0.2); padding: 2rem 0; text-align: center; color: #6b6356; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1.2rem; letter-spacing: 0.2em; color: #c9a84c;">PBN</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="/work">작업</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <a href="tel:010-1234-5678" class="tel-link">상담하기</a>
+                    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>PBN 빌더 블로그</h1>
+            <p>마포에서 신작 애니메이션을 준비하는 모든 분들을 위한 이야기, 팁, 그리고 영감.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="blog-card">
+                <div class="meta">2025년 6월 · 마포 애니메이션 스튜디오</div>
+                <h2>처음 신작 애니메이션을 기획할 때 꼭 알아야 할 3가지</h2>
+                <p class="drop-cap">내가 처음으로 애니메이션 프로젝트를 시작했을 때, 정말 아무것도 몰랐어. 마포에 있는 작은 카페에서 친구랑 아이디어를 던지고, "이거 진짜 만들 수 있을까?"라는 말만 백 번은 한 것 같아. 근데 말이야, 막상 부딪혀 보니까 생각보다 괜찮았어. 그래서 오늘은 그 경험을 바탕으로, 신작 애니메이션을 준비하는 너에게 꼭 전해주고 싶은 3가지를 정리해 봤어.</p>
+                <p><strong>첫째, 프리프로덕션을 무시하지 마.</strong> 캐릭터 디자인, 세계관 설정, 스토리보드... 이 단계에서 시간을 좀 써야 나중에 후퇴하지 않아. 나는 처음에 "일단 그리면서 생각하자"는 마인드로 시작했다가, 3주 치 작업을 갈아엎은 적이 있어. 진짜 피눈물 나더라. PBN 빌더랑 협업할 때도 항상 프리프로덕션을 강조하는 이유가 바로 그거야.</p>
+                <p><strong>둘째, 팀의 방향성을 확실히 해.</strong> "그냥 예쁘게" 같은 건 절대 금지야. '레트로 SF'인지, '감성 드라마'인지, '액션 블록버스터'인지 명확히 해야 해. 그래야 각자 작업하는 게 하나로 모여. 우리 스튜디오에서는 첫 회의 때 무조건 무드보드를 만들고, 컨셉 아트로 분위기를 확정 지어. 이게 없으면 나중에 다들 제각각이야.</p>
+                <p><strong>셋째, 예산과 일정은 현실적으로.</strong> 아, 이건 정말 뼈아픈 교훈이야. 처음엔 "우리 밤새면 되지"라는 생각으로 일정을 빡빡하게 잡았거든. 근데 현실은 야근해도 안 되더라. PBN 빌더는 이 부분에서 진짜 도움이 많이 됐어. 전문가들이랑 같이 일정을 짜니까, 내가 놓친 변수가 보이더라고. 덕분에 지금 프로젝트는 예정보다 일주일이나 여유 있게 진행 중이야.</p>
+                <p>사실 이 모든 걸 한 번에 완벽하게 할 순 없어. 나도 아직 배우는 중이고. 하지만 중요한 건 시작이라는 거, 그리고 적절한 파트너를 만나는 거야. 마포에서 신작 애니메이션을 꿈꾼다면, 언제든 PBN 빌더에 연락해 봐. 커피 한 잔 하면서 이야기 나누는 것만으로도 큰 도움이 될 거야.</p>
+                <p style="margin-top: 1.5rem; font-style: italic; color: #b0a89a;">— 당신의 브로, PBN 빌더 팀</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 PBN 빌더 · 마포에서 시작하는 신작 애니메이션의 모든 것</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

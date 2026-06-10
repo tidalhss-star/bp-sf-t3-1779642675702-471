@@ -1,213 +1,614 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>신작애니 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #FCFBF7;
-      --charcoal-fg: #1E1B18;
-      --gold-accent: #b8976f;
-      --hairline-color: #e5e2db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 – 마포 신작 애니메이션 전문 | sf-t3-1779642675702-471.vercel.app</title>
+    <meta name="description" content="마포에서 시작하는 신작 애니메이션 프로젝트, PBN 빌더가 당신의 이야기를 세상에 알립니다. 고급스러운 에디토리얼 감성으로 브랜드 스토리를 전달해요. 지금 상담하세요.">
+    <meta name="keywords" content="PBN 빌더, 마포 애니메이션, 신작 애니, 애니메이션 제작, 브랜드 스토리텔링, 애니메이션 마케팅">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <link rel="canonical" href="https://sf-t3-1779642675702-471.vercel.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PBN 빌더 – 마포 신작 애니메이션 전문">
+    <meta property="og:description" content="마포에서 시작하는 신작 애니메이션, PBN 빌더가 당신의 이야기를 세상에 알립니다. 고급스러운 에디토리얼 감성으로 브랜드 스토리를 전달해요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-471.vercel.app/">
+    <meta property="og:image" content="https://sf-t3-1779642675702-471.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PBN 빌더 – 마포 신작 애니메이션 전문">
+    <meta name="twitter:description" content="마포에서 시작하는 신작 애니메이션, PBN 빌더가 당신의 이야기를 세상에 알립니다.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-471.vercel.app/twitter-image.jpg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "PBN 빌더",
+        "description": "마포 지역 신작 애니메이션 제작 및 마케팅 전문 스튜디오",
+        "url": "https://sf-t3-1779642675702-471.vercel.app/",
+        "telephone": "+82-10-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "마포",
+            "addressCountry": "KR"
+        },
+        "areaServed": "마포",
+        "priceRange": "₩₩"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <title>PBN 빌더 – 마포 신작 애니메이션 전문</title>
+
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #fafaf5;
+            color: #1a1a1a;
+            padding: 0 24px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.08em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #c5a880;
+            padding-bottom: 0.5rem;
+            letter-spacing: 0.06em;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.04em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #c5a880;
+        }
+
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+            line-height: 0.8;
+            color: #c5a880;
+            font-weight: 400;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 72px 0 24px;
+            border-bottom: 1px solid #c5a880;
+            margin-bottom: 48px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #c5a880;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #1a1a1a;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        nav a:hover {
+            border-bottom-color: #c5a880;
+            color: #c5a880;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #1a1a1a;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav {
+            display: none;
+            width: 100%;
+            padding: 24px 0;
+            border-top: 1px solid #c5a880;
+            margin-top: 16px;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            color: #1a1a1a;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0;
+            margin-bottom: 120px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 40%, #3a3a3a 70%, #1a1a1a 100%);
+            color: #fafaf5;
+            text-align: center;
+            border: 1px solid #c5a880;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(197, 168, 128, 0.15) 0%, transparent 50%, rgba(197, 168, 128, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 48px 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.12em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+            color: rgba(250, 250, 245, 0.9);
+        }
+
+        .hero .sub {
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #c5a880;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .cta-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 32px;
+            border: 1px solid #c5a880;
+            color: #fafaf5;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .hero .cta-link:hover {
+            background: #c5a880;
+            color: #1a1a1a;
+        }
+
+        /* Section Spacing */
+        section {
+            margin-bottom: 120px;
+            padding: 0;
+        }
+
+        /* Fine Borders */
+        .fine-border {
+            border: 1px solid #c5a880;
+            padding: 32px;
+        }
+
+        /* UGC Reviews */
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-top: 32px;
+        }
+
+        .review-card {
+            border-top: 1px solid #c5a880;
+            padding-top: 24px;
+        }
+
+        .review-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #555;
+            letter-spacing: 0.03em;
+        }
+
+        .review-card .nickname {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .review-card .stars {
+            color: #c5a880;
+            letter-spacing: 0.2em;
+            font-size: 1rem;
+        }
+
+        .review-card blockquote {
+            font-style: italic;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* About / Narrative */
+        .narrative {
+            padding: 0;
+        }
+
+        .narrative p {
+            font-size: 1.05rem;
+        }
+
+        /* Contact */
+        .contact-info {
+            border-top: 1px solid #c5a880;
+            padding-top: 32px;
+        }
+
+        .contact-info .phone {
+            font-size: 1.6rem;
+            letter-spacing: 0.05em;
+            color: #1a1a1a;
+        }
+
+        .contact-info .phone a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #c5a880;
+        }
+
+        .contact-info .phone a:hover {
+            color: #c5a880;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 72px;
+            border-top: 1px solid #c5a880;
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+            letter-spacing: 0.05em;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .copyright {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 16px;
+            }
+
+            header {
+                padding: 48px 0 16px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .mobile-nav.active {
+                display: block;
+            }
+
+            .hero {
+                padding: 48px 0;
+                margin-bottom: 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            section {
+                margin-bottom: 80px;
+            }
+
+            .review-grid {
+                gap: 32px;
+            }
+
+            .contact-info .phone {
+                font-size: 1.2rem;
+            }
+
+            .fine-border {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .cta-link {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">EDITORIAL.T3</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE T3 / ACCENT HAIRLINES</div>
-      <h1>신작애니 리서치 및 기술 인프라 저널</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>신작애니</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>신작애니: 라이프스타일: 일상 최적화 가이드</h3>
-          <p>바쁘게 흘러가는 도심 라이프 속에서 나만의 시간적 여유와 쾌적한 데일리 습관을 디자인하는 것은 삶의 질을 극대화하는 가장 첫 번째 과제입니다. 미니멀한 마인드와 루틴 설계는 큰 힘...</p>
-        </a>
-      
+    <div class="container">
+        <header>
+            <div class="header-inner">
+                <a href="/" class="logo">PBN <span>빌더</span></a>
+                <nav>
+                    <a href="#about">소개</a>
+                    <a href="#reviews">리뷰</a>
+                    <a href="#contact">연락처</a>
+                </nav>
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#about">소개</a>
+                <a href="#reviews">리뷰</a>
+                <a href="#contact">연락처</a>
+            </div>
+        </header>
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>신작애니: 라이프스타일: 공간 미학과 정리 정돈</h3>
-          <p>가구 배치와 조명 연출 하나만으로 평범한 방을 아늑한 아지트로 변모시키는 공간 정리 팁은 내 멘탈 에너지를 가득 채워주는 보이지 않는 강력한 힘을 발휘하는 일상 속 예술입니다....</p>
-        </a>
-      
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-content">
+                    <p class="sub">마포 · 신작 애니메이션</p>
+                    <h1>PBN 빌더</h1>
+                    <p>당신의 이야기를 세상에 알리는 가장 우아한 방법. 에디토리얼 감성으로 완성하는 브랜드 스토리텔링.</p>
+                    <a href="tel:+821062790862" class="cta-link">010-6279-0862</a>
+                </div>
+            </section>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>신작애니: 라이프스타일: 디지털 디톡스와 아날로그 쉼표</h3>
-          <p>끊임없이 쏟아지는 푸시 알림과 스마트폰의 피로로부터 온전히 격리된 채, 하루에 단 30분씩이라도 책을 읽거나 명상을 즐기는 아날로그 디톡스 루틴은 정신 건강을 지키는 든든한 방패입...</p>
-        </a>
-      
+            <!-- About / Narrative Section -->
+            <section id="about" class="narrative">
+                <h2>우리의 이야기</h2>
+                <div class="drop-cap">
+                    <p>마포 한복판, 작은 스튜디오에서 시작한 PBN 빌더는 단순한 애니메이션 제작사를 넘어 브랜드의 정수를 담아내는 공간이 되고 싶었어요. 저희는 신작 애니메이션 하나하나를 마치 한 권의 고급 에디토리얼처럼 다룹니다. 모든 컷, 모든 프레임에 이야기를 담고, 그 이야기가 고객의 마음에 오래도록 각인되도록 하죠.</p>
+                    <p>사실 처음에는 '애니메이션 제작'이라는 말이 좀 딱딱하게 느껴졌어요. 그래서 저희만의 방식을 만들기로 했습니다. 세리프 폰트의 우아함, 높은 대비의 시네마틱한 그라데이션, 그리고 공기처럼 여백을 숨 쉬게 하는 레이아웃. 이 모든 것이 모여 PBN 빌더만의 시그니처가 되었죠.</p>
+                    <p>지금은 마포를 넘어 전국에서 의뢰가 들어오고 있어요. 하지만 여전히 저희는 작은 스튜디오의 따뜻함을 잃지 않으려 노력합니다. 고객 한 분 한 분과의 대화를 소중히 여기고, 그분들의 이야기를 가장 아름다운 방식으로 풀어내는 것이 저희의 자부심이니까요.</p>
+                </div>
+            </section>
 
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>라이프스타일 에디터가 강력 추천하는 PBN 빌더 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
+            <!-- UGC Reviews Section -->
+            <section id="reviews">
+                <h2>고객의 소리</h2>
+                <p style="margin-bottom: 2rem; color: #555;">PBN 빌더와 함께한 분들의 진솔한 후기입니다.</p>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="meta">
+                            <span class="nickname">애니러버92</span>
+                            <span>2024.12.15</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"정말 감동적인 작업물이 나왔어요. 처음에 컨셉 설명을 들었을 때는 '이게 가능할까?' 싶었는데, 결과물을 보고 깜짝 놀랐습니다. 마치 영화 한 편을 본 것 같은 몰입감이었어요. 특히 컬러 톤과 타이포그래피의 조화가 예술이에요. 다음 프로젝트도 꼭 함께 하고 싶습니다."</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span class="nickname">서울감성</span>
+                            <span>2024.11.28</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"PBN 빌더의 작업 방식이 너무 인상 깊었어요. 단순히 애니메이션을 만들어주는 게 아니라, 우리 브랜드의 스토리를 진지하게 듣고 함께 고민해주더라고요. 덕분에 단순한 홍보 영상이 아니라 예술 작품 같은 결과물이 나왔습니다. 강력 추천합니다!"</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span class="nickname">마포토박이</span>
+                            <span>2024.10.10</span>
+                        </div>
+                        <div class="stars">★★★★☆</div>
+                        <blockquote>"마포에서 애니메이션 스튜디오를 찾다가 우연히 알게 되었는데, 너무 만족스러워요. 작업 기간 동안 소통이 정말 원활했고, 중간중간 진행 상황을 공유해줘서 믿고 맡길 수 있었습니다. 별 하나를 뺀 이유는 작업이 너무 완벽해서 다음에 또 맡기고 싶은 마음에 일부러... 농담입니다. 진짜 최고예요."</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span class="nickname">스토리헌터</span>
+                            <span>2024.09.05</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"제가 구상했던 이야기를 훨씬 뛰어넘는 결과물을 받았어요. 특히 오프닝 시퀀스의 그라데이션 효과는 정말 압권이었습니다. 덕분에 런칭 행사에서 많은 사람들의 주목을 받을 수 있었어요. PBN 빌더와 함께해서 영광입니다."</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span class="nickname">창작의고통</span>
+                            <span>2024.08.20</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"솔직히 처음에는 가격이 조금 부담됐어요. 하지만 작업물을 받아보니 그 값어치를 훨씬 넘는 퀄리티에 감탄했습니다. 특히 브랜드 아이덴티티를 애니메이션에 자연스럽게 녹여내는 능력이 탁월해요. 앞으로도 계속 함께하고 싶은 파트너입니다."</blockquote>
+                    </div>
+                </div>
+            </section>
 
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>라이프스타일 에디터가 강력 추천하는 PBN 빌더 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>함께 이야기 나눠요</h2>
+                <div class="fine-border contact-info">
+                    <p style="margin-bottom: 0.5rem; font-size: 0.9rem; letter-spacing: 0.05em; color: #555;">언제든지 편하게 연락주세요. 여러분의 이야기를 듣고 싶습니다.</p>
+                    <div class="phone">
+                        <a href="tel:+821062790862">010-6279-0862</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #777;">마포구 · 상담 가능 시간: 평일 10:00 ~ 19:00</p>
+                </div>
+            </section>
+        </main>
+
+        
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
       
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.T3. ALL RIGHTS RESERVED.</div>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">PBN 빌더 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 착각의 참사 — 원단 선택법 아, 진짜... 잘못 선택된 원단으로 인해 발생한 코미케 참사는 놀라운 경험이었습니다. 이번 글에서는 원단 선택에 대한 간략하지만 중요한 가이드를 제공하겠습니다. ### 소재 도매상의 시점에서 소재 도매상은 자신들의 제품을 '품번'으</p>
       </div>
-    </footer>
+      <a href="posts/t3link-002-1jv0jv5.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+            <p>PBN 빌더 · 마포 신작 애니메이션 전문</p>
+            <p>서울특별시 마포구</p>
+            <p class="copyright">© 2024 PBN 빌더. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            const isExpanded = mobileNav.classList.contains('active');
+            hamburger.setAttribute('aria-label', isExpanded ? '메뉴 닫기' : '메뉴 열기');
+        });
+
+        // Close mobile nav on link click
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                hamburger.setAttribute('aria-label', '메뉴 열기');
+            });
+        });
+    </script>
 </body>
 </html>
